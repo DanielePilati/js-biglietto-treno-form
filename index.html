@@ -20,9 +20,9 @@
             <h1 class="mb-2">Create your Ticket-Offer</h1>
           </div>
           <div class="col-lg-5 mx-auto">
-            <div class="bg-body-tertiary rounded p-4">
-              <form action="">
-                <div class="mb-3">
+            <div class="bg-body-tertiary rounded p-4 mb-2">
+              <form action="" id="ticket-form">
+                <div class="mb-2">
                   <label for="exampleInputAge" class="form-label"
                     >Insert your age</label
                   >
@@ -36,7 +36,7 @@
                     Inserisci la tua età
                   </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-4">
                   <label for="exampleInputKm" class="form-label"
                     >Insert distance (Km)</label
                   >
@@ -49,11 +49,21 @@
                     Inserisci i Km da percorrere
                   </div>
                 </div>
-                <div class="mb-3">
-                  <button type="submit" class="btn btn-dark">Submit</button>
-                  <button type="submit" class="btn btn-secondary">Reset</button>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" class="btn btn-secondary mx-1">
+                    Reset
+                  </button>
+                  <button type="submit" class="btn btn-dark mx-1">
+                    Submit
+                  </button>
+                </div>
+                <div>
+                  <h2 class="final-price"></h2>
                 </div>
               </form>
+            </div>
+            <div class="bg-body-tertiary rounded p-4 d-none" id="banner">
+              <h2 class="text-center" id="message"></h2>
             </div>
           </div>
         </div>
