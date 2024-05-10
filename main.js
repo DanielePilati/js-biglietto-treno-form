@@ -30,9 +30,9 @@ form.addEventListener("submit", function (event) {
   document.getElementById("myBtn").classList.toggle("d-none");
   document.getElementById("reset-btn").classList.toggle("d-none");
   document.getElementById("banner").classList.toggle("d-none");
-  document.getElementById("banner-two").classList.toggle("d-none");
 
   if (age.value > 0 && km.value > 0 && age.value < 130) {
+    document.getElementById("banner-two").classList.toggle("d-none");
     if (age.value < 18) {
       price = price / 1.2;
       console.log("sei minorenne 20% di sconto");
