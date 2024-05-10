@@ -3,11 +3,7 @@
 const form = document.getElementById("ticket-form");
 
 form.addEventListener("reset", function () {
-  document.getElementById("myBtn").classList.toggle("d-none");
-  document.getElementById("reset-btn").classList.toggle("d-none");
-  document.getElementById("banner").classList.toggle("d-none");
-  document.getElementById("banner-two").classList.toggle("d-none");
-  document.getElementById("refreshmessage").classList.toggle("d-none");
+  location.reload();
 });
 
 form.addEventListener("submit", function (event) {
@@ -30,9 +26,9 @@ form.addEventListener("submit", function (event) {
   document.getElementById("myBtn").classList.toggle("d-none");
   document.getElementById("reset-btn").classList.toggle("d-none");
   document.getElementById("banner").classList.toggle("d-none");
+  document.getElementById("banner-two").classList.toggle("d-none");
 
   if (age.value > 0 && km.value > 0 && age.value < 130) {
-    document.getElementById("banner-two").classList.toggle("d-none");
     if (age.value < 18) {
       price = price / 1.2;
       console.log("sei minorenne 20% di sconto");
@@ -56,9 +52,8 @@ form.addEventListener("submit", function (event) {
       )} € (prezzo pieno)`;
     }
   } else {
+    document.getElementById("banner-two").classList.toggle("d-none");
     console.log("inserisci valori validi");
-    document.getElementById(
-      "message"
-    ).innerHTML = `Questi valori non sono validi`;
+    message.innerHTML = `Questi valori non sono validi`;
   }
 });
